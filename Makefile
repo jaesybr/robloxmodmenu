@@ -5,8 +5,11 @@ include $(THEOS)/makefiles/common.mk
 
 TWEAK_NAME = RobloxModMenu
 
-RobloxModMenu_FILES = $(shell find Sources/RobloxModMenu -name '*.swift') \
-                      $(shell find Sources/RobloxModMenuC -name '*.m' -o -name '*.c' -o -name '*.mm' -o -name '*.cpp')
+RobloxModMenu_FILES = $(wildcard Sources/RobloxModMenu/*.swift) \
+                      $(wildcard Sources/RobloxModMenuC/*.m) \
+                      $(wildcard Sources/RobloxModMenuC/*.c) \
+                      $(wildcard Sources/RobloxModMenuC/*.mm) \
+                      $(wildcard Sources/RobloxModMenuC/*.cpp)
 
 RobloxModMenu_SWIFTFLAGS = -ISources/RobloxModMenuC/include
 RobloxModMenu_CFLAGS = -fobjc-arc -ISources/RobloxModMenuC/include
