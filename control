@@ -1,0 +1,9 @@
+Package: com.yourcompany.robloxmodmenu
+Name: RobloxModMenu
+Version: 0.0.1
+Architecture: iphoneos-arm
+Description: An awesome Orion tweak!
+Maintainer: trap
+Author: trap
+Section: Tweaks
+Depends: ${ORION}, firmware (>= 12.2)
